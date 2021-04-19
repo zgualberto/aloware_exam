@@ -1,6 +1,10 @@
 ## APP Setup
 
 1. Setup MYSQL, NGINX, PHP, NodeJS
+    * Node JS version 14.16.1
+    * MYSQL 8
+    * PHP 7.4
+    * NGINX 1.8.0 (Ubuntu)
 1. Go to root directory and run the ff:
     * `composer install`
     * `php artisan migrate`
