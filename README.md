@@ -1,6 +1,6 @@
 ## APP Setup
 
-1. Setup MYSQL, NGINX, PHP, NodeJS
+1. Setup MYSQL, NGINX, PHP, NodeJS, Composer
     * Node JS version 14.16.1
     * MYSQL 8
     * PHP 7.4
@@ -11,7 +11,7 @@
     * `php artisan migrate`
     * `cd client && npm install`
 1. Create `.env.local` on root folder and also on `client` folder check `.env.example` for reference
-1. Setup DATABASE Configuration on `.env.local`
+1. Setup DATABASE Configuration on `.env.local` located on root folder
 1. To run Unit test
     * `php artisan test`
 1. to run API - `php artisan serve`
