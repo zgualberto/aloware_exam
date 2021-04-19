@@ -20,7 +20,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return $this->service->list();
+        return response()->json($this->service->list(), 200);
     }
 
     /**
@@ -32,7 +32,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validator($request);
-        return $this->service->create($request->all());
+        return response()->json($this->service->create($request->all()), 201);
     }
 
     /**

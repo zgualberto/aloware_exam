@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('posts', App\Http\Controllers\PostController::class);
+// Route::resource('posts', App\Http\Controllers\PostController::class);
+
+Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts.list');
+Route::post('/posts', [App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

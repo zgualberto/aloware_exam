@@ -1,20 +1,20 @@
 <template>
-  <v-app>
-    <Posts />
-  </v-app>
+    <v-app>
+        <Posts />
+    </v-app>
 </template>
 
 <script>
 import Posts from "@/components/Posts";
 
 export default {
-  name: "App",
+    name: "App",
 
-  data: () => ({
-    //
-  }),
-  components: {
-    Posts,
-  },
+    data: () => ({
+        //
+    }),
+    components: {
+        Posts,
+    },
 };
 </script>

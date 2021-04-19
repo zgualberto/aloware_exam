@@ -41,20 +41,7 @@ class PostService {
     {
         try {
             $post = Post::create($data);
-            return PostResource::collection(
-                Post::where('parent_post_id', null)
-                    ->where('parent_reply_id', null)
-                    ->with([
-                        'reply' => function($query) {
-                            $query->with(['subReply' => function ($query2) {
-                                    $query2->orderBy('created_at', 'DESC');
-                                }])
-                                ->orderBy('created_at', 'DESC');
-                        }
-                    ])
-                    ->orderBy('created_at', 'DESC')
-                    ->get()
-            );
+            return $this->list();
         } catch (Throwable $e) {
             return response()->json([
                 "success" => false,
