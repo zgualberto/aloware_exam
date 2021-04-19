@@ -16,5 +16,6 @@
     * `php artisan test`
 1. to run API - `php artisan serve`
 1. to run Frontend - `cd client && npm run serve`
+1. Make sure to have the right permissions specially on the API when running it via `php artisan serve` or NGINX
 
 If you have more questions kindly email me @ ziegfrid.gualberto@gmail.com
