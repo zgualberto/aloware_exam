@@ -1,6 +1,6 @@
 ## APP Setup
 
-1. Setup MYSQL database
+1. Setup MYSQL, NGINX, PHP, NodeJS
 1. Go to root directory and run the ff:
     * `composer install`
     * `php artisan migrate`
