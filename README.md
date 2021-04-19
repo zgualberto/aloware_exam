@@ -9,5 +9,7 @@
 1. Setup DATABASE Configuration
 1. To run Unit test
     * `php artisan test`
+1. to run API - `php artisan serve`
+1. to run Frontend - `cd client && npm run serve`
 
 If you have more questions kindly email me @ ziegfrid.gualberto@gmail.com
