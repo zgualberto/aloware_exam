@@ -6,7 +6,6 @@
 /client/node_modules
 /client/.env.local
 /client/package-lock.json
-/client/.git
 .env
 .env.backup
 .phpunit.result.cache
