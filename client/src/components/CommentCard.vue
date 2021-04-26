@@ -53,7 +53,7 @@
                     <div
                         v-if="undefined !== post.reply && post.reply.length > 0"
                     >
-                        <ComponentCard
+                        <CommentCard
                             v-for="replyPost in post.reply"
                             :key="replyPost.id"
                             :post="replyPost"
@@ -67,7 +67,7 @@
                             post.sub_reply.length > 0
                         "
                     >
-                        <ComponentCard
+                        <CommentCard
                             v-for="subReplyPost in post.sub_reply"
                             :key="subReplyPost.id"
                             :post="subReplyPost"
@@ -83,12 +83,12 @@
 
 <script>
 import moment from "moment";
-import ComponentCard from "@/components/CommentCard";
+import CommentCard from "@/components/CommentCard";
 
 export default {
-    name: "ComponentCard",
+    name: "CommentCard",
     components: {
-        ComponentCard,
+        CommentCard,
     },
     props: {
         post: {
