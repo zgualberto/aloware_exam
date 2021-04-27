@@ -9,14 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = ['comment', 'username', 'parent_post_id', 'parent_reply_id'];
+    protected $fillable = ['comment', 'username', 'parent_id'];
 
     /**
      * Get the reply associated with post.
      */
     public function reply()
     {
-        return $this->hasMany(Post::class, 'parent_post_id', 'id');
+        return $this->hasMany(Post::class, 'parent_id', 'id');
     }
 
     /**
@@ -24,7 +24,7 @@ class Post extends Model
      */
     public function subReply()
     {
-        return $this->hasMany(Post::class, 'parent_reply_id', 'id');
+        return $this->hasMany(Post::class, 'parent_id', 'id');
     }
 
     /**

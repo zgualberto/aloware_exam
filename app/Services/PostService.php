@@ -16,8 +16,7 @@ class PostService {
     public function list() 
     {
         return PostResource::collection(
-            Post::where('parent_post_id', null)
-                ->where('parent_reply_id', null)
+            Post::where('parent_id', null)
                 ->with([
                     'reply' => function($query) {
                         $query->with(['subReply' => function ($query2) {

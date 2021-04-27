@@ -13,8 +13,7 @@ class PostApiTest extends TestCase
         '*' => [
             "id",
             "username",
-            "parent_post_id",
-            "parent_reply_id",
+            "parent_id",
             "comment",
             "created_at",
             "updated_at",
@@ -22,8 +21,7 @@ class PostApiTest extends TestCase
                 '*' => [
                     "id",
                     "username",
-                    "parent_post_id",
-                    "parent_reply_id",
+                    "parent_id",
                     "comment",
                     "created_at",
                     "updated_at",
@@ -31,8 +29,7 @@ class PostApiTest extends TestCase
                         '*' => [
                             "id",
                             "username",
-                            "parent_post_id",
-                            "parent_reply_id",
+                            "parent_id",
                             "comment",
                             "created_at",
                             "updated_at",

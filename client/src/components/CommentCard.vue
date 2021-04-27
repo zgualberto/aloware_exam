@@ -38,7 +38,7 @@
                             v-model="newPost.username"
                         ></v-text-field>
                         <v-textarea
-                            label="Post"
+                            label="Comment"
                             auto-grow
                             outlined
                             v-model="newPost.comment"
@@ -120,7 +120,6 @@ export default {
             this.showReplyForm = !this.showReplyForm;
         },
         sendReply(post) {
-            let data;
             if (
                 null === this.newPost.username ||
                 null === this.newPost.comment
@@ -129,19 +128,11 @@ export default {
                 return false;
             }
 
-            if (post.parent_post_id == null && post.parent_reply_id == null) {
-                data = {
-                    username: this.newPost.username,
-                    comment: this.newPost.comment,
-                    parent_post_id: post.id,
-                };
-            } else {
-                data = {
-                    username: this.newPost.username,
-                    comment: this.newPost.comment,
-                    parent_reply_id: post.id,
-                };
-            }
+            const data = {
+                username: this.newPost.username,
+                comment: this.newPost.comment,
+                parent_id: post.id,
+            };
 
             console.log(data);
 

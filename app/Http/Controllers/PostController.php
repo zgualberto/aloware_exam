@@ -46,8 +46,7 @@ class PostController extends Controller
         $request->validate([
             'username' => 'required',
             'comment' => 'required',
-            'parent_post_id' => 'integer',
-            'parent_reply_id' => 'integer'
+            'parent_id' => 'integer'
         ]);
     }
 }
